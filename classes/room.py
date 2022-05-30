@@ -7,10 +7,14 @@ class Room:
         self.occupants = []
 
     def check_in_guest(self, guest):
-        self.occupants.append(guest)
+        if self.capacity > len(self.occupants):
+            self.occupants.append(guest)
 
     def check_out_guest(self, guest_name):
         for guest in self.occupants:
             if guest.name == guest_name:
                 self.occupants.remove(guest)
+
+    def add_song(self, song):
+        self.playlist.append(song)
 
