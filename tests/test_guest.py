@@ -5,7 +5,7 @@ from classes.guest import Guest
 class TestGuest(unittest.TestCase):
 
     def setUp(self):
-        self.guest = Guest('James', 28, 'Billie Jean')
+        self.guest = Guest('James', 28, 'Billie Jean', 70)
 
     def test_guest_has_name(self):
         self.assertEqual('James', self.guest.name)
